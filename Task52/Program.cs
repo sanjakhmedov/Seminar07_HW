@@ -52,13 +52,13 @@ void ColAvarage(int[,] matr)
     Console.Write("[");
     for (int i = 0; i < matr.GetLength(1); i++)
     {
-    int result = 0;
+    double result = 0;
         for (int j = 0; j < matr.GetLength(0); j++)
         {
             result += matr[j,i];
         }
-    if (i < matr.GetLength(1) -1 ) Console.Write(result + ", ");
-    else Console.Write(result + "]");
+    if (i < matr.GetLength(1) -1 ) Console.Write(result / matr.GetLength(0) + ", ");
+    else Console.Write(result / matr.GetLength(0) + "]");
     }
 }
 
